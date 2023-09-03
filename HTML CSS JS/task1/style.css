@@ -1,0 +1,15 @@
+*{
+    color: red;
+}
+.heading{
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.normal{
+    font-size: 12px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.align_right{
+    text-align: right;
+}

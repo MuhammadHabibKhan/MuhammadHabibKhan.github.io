@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script>
+        function onPressed(){
+            var name = document.getElementById("name").value;
+            var namespan = document.getElementById("namespan");
+
+            var phone = document.getElementById("ph").value;
+            var ph = document.getElementById("phone");
+            if (name == ""){
+                // document.getElementById("name").defaultValue = "Please Enter Full Name";
+                namespan.innerHTML = "Please don't leave the field empty";
+            }
+            if (phone == ""){
+                ph.innerHTML = "Please Enter Valid Phone No.";  
+            }
+            else{
+                namespan.innerHTML = "";
+                ph.innerHTML = "";
+            }
+
+        }
+    </script>
+    <section>
+        <div class="formBox">
+            <div class="formVal">
+                <form action="">
+                    <h2 id="heading">Register</h2>
+
+                    <div class="inputBox">
+                        <ion-icon name="accessibility-outline"></ion-icon>
+                        <input type="name" id="name" required>
+                        <label for="">Full Name</label>
+                        <span class="msg" id="namespan"></span>
+                        <!-- <ion-icon name="warning-outline"></ion-icon><label for="">Wrong</label> -->
+                    </div>
+
+                    <div class="inputBox">
+                        <ion-icon name="person-circle-outline"></ion-icon>
+                        <input type="username" required>
+                        <label for="">Username</label>
+                    </div>
+
+                    <div class="inputBox">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="email" required>
+                        <label for="">Email</label>
+                    </div>
+
+                    <div class="inputBox">
+                        <ion-icon name="call-outline"></ion-icon>
+                        <input type="phoneno" id="ph" required>
+                        <label for="">Phone Number</label>
+                        <span class="msg1" id = "phone"> </span>
+                    </div>
+
+                    <div class="inputBox">
+                        <ion-icon name="calendar-outline"></ion-icon>
+                        <input type="dob" required>
+                        <label for="">Date of Birth</label>
+                    </div>
+
+                    <div class="inputBox">
+                        <ion-icon name="card-outline"></ion-icon>
+                        <input type="cnic" required>
+                        <label for="">CNIC</label>
+                    </div>
+
+                    <!-- <div class="remember">
+                        <input type="checkbox">
+                        <label for="">Remember Me</label>
+                    </div>
+
+                    <div class="fpass">
+                        <a href="#">Forget Password</a>
+                    </div> -->
+
+                    <button onclick= onPressed()>
+                        Register
+                    </button>
+                    
+                    <div class="register">
+                        <p>Have an account already?  <a href="#"> | Sign in</a></p>
+                    </div>
+
+                    <div>
+                        <p><center>--- OR ---</center></p>
+                    </div>
+
+                    <div class="google">
+                        <ion-icon name="logo-google" size="small" id="googly"></ion-icon>
+                        <span> | Sign Up with Google </span>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
